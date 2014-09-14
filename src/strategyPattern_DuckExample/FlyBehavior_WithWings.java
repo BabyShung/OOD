@@ -1,4 +1,4 @@
-package DuckExample;
+package strategyPattern_DuckExample;
 
 public class FlyBehavior_WithWings implements FlyBehavior{
 

@@ -1,4 +1,4 @@
-package DuckExample;
+package strategyPattern_DuckExample;
 
 public abstract class Duck {
 
