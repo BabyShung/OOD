@@ -18,7 +18,10 @@ public class Elevator implements ElevatorFactory {
 	}
 
 	public int nextDestionation() {
-		return this.destinationFloors.peek();
+		if(!destinationFloors.isEmpty())
+			return this.destinationFloors.peek();
+		else
+			return -1;
 	}
 
 	public int currentFloor() {

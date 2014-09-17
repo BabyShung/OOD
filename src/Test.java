@@ -2,6 +2,13 @@ import observerPattern_WeatherStation.CurrentConditionDisplay;
 import observerPattern_WeatherStation.WeatherData;
 import strategyPattern_DuckExample.DonDuck;
 import strategyPattern_DuckExample.Duck;
+import decoratorPattern_StarBuzzCoffee.Beverage;
+import decoratorPattern_StarBuzzCoffee.DarkRoast;
+import decoratorPattern_StarBuzzCoffee.DensedMilk;
+import decoratorPattern_StarBuzzCoffee.Espresso;
+import decoratorPattern_StarBuzzCoffee.HouseBlend;
+import decoratorPattern_StarBuzzCoffee.Mocha;
+import decoratorPattern_StarBuzzCoffee.Whip;
 
 public class Test {
 
@@ -30,16 +37,30 @@ public class Test {
 		Duck reuseCodeDuck = new DonDuck();
 		reuseCodeDuck.fly();
 		reuseCodeDuck.quack();
-		
-		
+
 		/**
 		 * Observer pattern
 		 */
 		WeatherData wd = new WeatherData();
 		CurrentConditionDisplay ccd = new CurrentConditionDisplay(wd);
 		wd.setMeasure(70, 56, 30.2f);
-	
-		
+
+		/**
+		 * Decorator Pattern
+		 */
+		Beverage beverage = new Espresso();
+		System.out.println(beverage);
+
+		Beverage beverage2 = new DarkRoast();
+		beverage2 = new Mocha(beverage2);
+		beverage2 = new DensedMilk(beverage2);
+		System.out.println(beverage2);
+
+		Beverage beverage3 = new HouseBlend();
+		beverage3 = new Whip(beverage3);
+		beverage3 = new Mocha(beverage3);
+		beverage3 = new DensedMilk(beverage3);
+		System.out.println(beverage3);
 
 	}
 
