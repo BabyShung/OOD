@@ -11,6 +11,4 @@ public class Bus extends Vehicle{
 		//check the spot...
 		return false;
 	}
-	
-	
 }
