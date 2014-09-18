@@ -1,0 +1,9 @@
+package CallCenter;
+
+public class Respondent extends Employee {
+
+	public Respondent() {
+		rank = Rank.respondent;
+	}
+
+}
