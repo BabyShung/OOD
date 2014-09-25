@@ -24,8 +24,8 @@ public class CurrentConditionDisplay implements Observer, DisplayElement {
 
 	@Override
 	public void update(Observable o, Object arg) {
-		if(o instanceof WeatherData){
-			WeatherData wd = (WeatherData)o;
+		if (o instanceof WeatherData) {
+			WeatherData wd = (WeatherData) o;// get its publisher
 			this.temperature = wd.getTemperature();
 			this.humidity = wd.getHumidity();
 			display();

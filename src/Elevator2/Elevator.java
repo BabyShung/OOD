@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Observable;
 
 public class Elevator extends Observable {
+	
 	private int floor;
 	private Direction direction;
 	private ArrayList<Integer> upStops;

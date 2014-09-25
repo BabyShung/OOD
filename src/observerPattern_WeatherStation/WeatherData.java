@@ -3,7 +3,10 @@ package observerPattern_WeatherStation;
 import java.util.ArrayList;
 
 public class WeatherData implements Subject {
-	private ArrayList<Observer> obs;
+
+	private ArrayList<Observer> obs;// maintain all obs
+
+	// its properties
 	private float temperature;
 	private float humidity;
 	private float pressure;
@@ -16,6 +19,7 @@ public class WeatherData implements Subject {
 		this.notifyObs();
 	}
 
+	// after setting, it should notify obs
 	public void setMeasure(float temperature, float humidity, float pressure) {
 		this.temperature = temperature;
 		this.humidity = humidity;

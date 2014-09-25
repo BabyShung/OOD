@@ -2,8 +2,10 @@ package observerPattern_WeatherStation;
 
 public class CurrentConditionDisplay implements Observer, DisplayElement {
 
+	// this device only cares about temp and humidity
 	private float temperature;
 	private float humidity;
+
 	private Subject weatherData;
 
 	public CurrentConditionDisplay(Subject weatherData) {

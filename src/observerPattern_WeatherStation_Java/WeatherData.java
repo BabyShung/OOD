@@ -3,6 +3,7 @@ package observerPattern_WeatherStation_Java;
 import java.util.Observable;
 
 public class WeatherData extends Observable {
+
 	private float temperature;
 	private float humidity;
 	private float pressure;
@@ -11,7 +12,7 @@ public class WeatherData extends Observable {
 	}
 
 	public void measureChanged() {
-		setChanged();
+		setChanged();// from Java Observable class, just notify obs
 	}
 
 	public void setMeasure(float temperature, float humidity, float pressure) {

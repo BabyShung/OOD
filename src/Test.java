@@ -42,8 +42,10 @@ public class Test {
 		 * Observer pattern
 		 */
 		WeatherData wd = new WeatherData();
+		// observer
 		CurrentConditionDisplay ccd = new CurrentConditionDisplay(wd);
-		wd.setMeasure(70, 56, 30.2f);
+		// once publisher updates, all its obs will update
+		wd.setMeasure(70, 56, 30.2f);//
 
 		/**
 		 * Decorator Pattern

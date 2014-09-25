@@ -26,7 +26,7 @@ public class ElevatorSystem implements Observer {
 	private Elevator[] elevatorPool;
 
 	// M floors, N elevators, each one has a control panel.
-	private FloorControl[][] floorControls;
+	private FloorControl[][] floorControls;//each of them is an ob
 
 	// FIFO
 	private Queue<Request> requestQueue;
@@ -44,13 +44,4 @@ public class ElevatorSystem implements Observer {
 	public void update(Observable elevator, Object state) {
 	}
 
-	private class Request {
-		int floor;
-		Direction direction;
-
-		public Request(int floor, Direction direction) {
-			this.floor = floor;
-			this.direction = direction;
-		}
-	}
 }
